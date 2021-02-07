@@ -1,0 +1,13 @@
+.container {
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  
+    &.gap {
+        grid-gap: 50px;
+    }
+}

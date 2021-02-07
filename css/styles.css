@@ -11,3 +11,20 @@ h1, h2 {
 
 h3 {
   font-family: "Lato", sans-serif; }
+
+a {
+  color: #036AAB; }
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  .wrapper.gap {
+    grid-gap: 50px; }
+
+.features-section .feature {
+  grid-column: span 4; }
