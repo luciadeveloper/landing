@@ -123,7 +123,9 @@ sup {
    * Remove the border on images inside links in IE 10.
    */
 img {
-  border-style: none; }
+  border-style: none;
+  max-width: 100%;
+  max-height: 100%; }
 
 /* Forms
      ========================================================================== */
@@ -443,11 +445,11 @@ main section {
     margin: 50px auto; }
   .main_header .video {
     box-shadow: 1px 2px 21px 0px #333333;
-    margin-bottom: -10px; }
+    border-radius: 6px;
+    position: relative; }
     .main_header .video .video-wrapper {
       background-color: #ffffff;
       overflow: hidden;
-      border-radius: 6px;
       position: relative; }
       .main_header .video .video-wrapper .video-cover {
         padding: 50px; }
@@ -461,12 +463,17 @@ main section {
       .main_header .video .video-wrapper .play-button {
         width: 110px;
         position: absolute;
-        top: calc(50% - 50px);
-        left: calc(50% - 50px); }
+        top: calc(50% - 55px);
+        left: calc(50% - 55px); }
         .main_header .video .video-wrapper .play-button:hover {
           cursor: pointer; }
       .main_header .video .video-wrapper .video-iframe {
         background-color: #000000; }
+
+main {
+  background: #ffffff;
+  margin-top: -270px;
+  padding-top: 270px; }
 
 /* || Section Features & secondary features */
 .features {
@@ -521,8 +528,14 @@ main section {
 /* || Screenshots Section */
 .screenshots {
   background: linear-gradient(180deg, #F8F8F8 0%, #ffffff 100%); }
-  .screenshots .screenshots-wrapper .screenshots-item {
-    grid-column: span 6; }
+  .screenshots .screenshots-wrapper {
+    overflow: visible; }
+    .screenshots .screenshots-wrapper .screenshots-item {
+      grid-column: span 6;
+      overflow: visible; }
+      .screenshots .screenshots-wrapper .screenshots-item img {
+        box-shadow: 2px 3px 12px 0 #aaa;
+        border-radius: 6px; }
 
 /* || Secondary features Section */
 .secondary-features {

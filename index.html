@@ -7,7 +7,8 @@
     <title>Landing challenge</title>
     <meta name="Author" content="luciadeveloper">
     <link rel="stylesheet" type="text/css" href="./css/styles.min.css">
- 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -24,7 +25,7 @@
         </div>
         <div class="video">
             <div class="video-wrapper">
-                <img class="play-button" alt="play" src="assets/play-button.svg"> 
+                <img class="play-button" alt="play" src="assets/play-button.svg">  <!-- this is not accessible--> 
                 <div class="video-cover">
                     <img alt="laptop" src="assets/laptop.svg"> 
                     <h2 class="h1">Form pages</h2>
@@ -112,7 +113,10 @@
         <section class="gain-control">  <!-- dark grey!! bg --> 
             <div class="gain-control-wrapper">
                 <div class="gain-control-column image-column">
-                    <img alt="icon check circle" src="assets/screenshot-01.png">
+                    <picture>
+                        <source media="(min-width:500px)"  srcset="assets/screenshot-01@2x.png">
+                        <img src="assets/screenshot-01.png" alt="screenshot" >
+                    </picture>
                 </div>
                 <div class="gain-control-column">
                     <h2>Gain Control of Your Forms</h2>
@@ -125,10 +129,16 @@
         <section class="screenshots">   <!-- gradient bg --> 
             <div class="screenshots-wrapper">
                 <div class="screenshots-item">
-                    <img alt="icon check circle" src="assets/screenshot-02.png">
+                    <picture>
+                        <source media="(min-width:500px)" srcset="assets/screenshot-02@2x.png">
+                        <img src="assets/screenshot-02.png" alt="screenshot">
+                    </picture>
                 </div>
                 <div class="screenshots-item">
-                    <img alt="icon check circle" src="assets/screenshot-03.png">
+                    <picture>
+                        <source media="(min-width:500px)" srcset="assets/screenshot-03@2x.png">
+                        <img src="assets/screenshot-03.png" alt="screenshot">
+                    </picture>
                 </div>
             </div>
         </section>

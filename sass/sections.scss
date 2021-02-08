@@ -33,11 +33,12 @@
     .video {
         @extend .container;  
         box-shadow: 1px 2px 21px 0px #333333;
-        margin-bottom: -10px;
+        border-radius:6px; 
+        position: relative;
         .video-wrapper {
             background-color: $neutral;
             overflow: hidden;
-            border-radius:6px; 
+            
             position: relative; 
             
             .video-cover {
@@ -55,8 +56,8 @@
             .play-button {
                 width: 110px;
                 position: absolute;
-                top: calc(50% - 50px);
-                left: calc(50% - 50px);
+                top: calc(50% - 55px);
+                left: calc(50% - 55px);
                 &:hover {
                     cursor: pointer;
                 }
@@ -68,6 +69,11 @@
     }
 }
 
+main {
+    background: $neutral;
+    margin-top: -270px;
+    padding-top: 270px;
+}
 /* || Section Features & secondary features */
 .features {
     @extend .wrapper;
@@ -163,9 +169,15 @@
         @extend .wrapper;
         @extend .container;
         @extend .gap;
-       
+        overflow: visible;
         .screenshots-item {
             grid-column: span 6;
+            overflow: visible;
+            
+            img {
+                box-shadow: 2px 3px 12px 0 #aaa;
+                border-radius: 6px;
+            }
         }
     }
 }
