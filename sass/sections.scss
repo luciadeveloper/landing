@@ -1,8 +1,133 @@
-/* || Section Features */
+/* || Section Header - hero */
+.main_header {
+    background-color: $secondary_color;
+    text-align: center;
 
+    p {
+        color: $neutral;
+        font-size: 1.25em;
+        line-height: 1.75em;
+        max-width: 626px;
+        margin: 0 auto;
+    }
+    .buttons-section {
+        margin: 50px auto;
+    }
+}
+
+/* || Section Features & secondary features */
 .features {
+    @extend .wrapper;
+    max-width: $container + 100;
     .features-item {
         grid-column: span 4;
+        padding: 40px 50px;
+        text-align: center;
+        border-right: 1px solid $light_colour;
+        border-top: 1px solid $light_colour;
+        
+        &:first-child, &:nth-child(2), &:nth-child(3) {
+            border-top: 0;
+        }
+
+        &:nth-child(3n + 0) {
+            border-right: 0;
+        }
+
+        h3 {
+            max-width: 250px;
+        }
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* || Section testimonials */
+
+.testimonials {
+    background: $gradient;
+    .testimonials-wrapper {
+        @extend .wrapper;
+        @extend .container;
+        @extend .gap;
+       // max-width: $container + 100;
+       .testimonials-item-wrapper {
+             grid-column: span 4;
+       
+            .testimonials-item {
+                
+                padding: 30px;
+                border: 1px solid $light_colour;
+                border-radius: 6px;
+                background-color: $neutral;
+            }
+        }
+    }
+}
+
+/* || Buttons Section */
+.buttons-section {
+    margin: 0px auto;
+    text-align: center;
+    padding-top: 0;
+}
+
+/* || Gain control Section */
+
+.gain-control {
+    background-color: $primary_color;
+    color: $neutral;
+    .gain-control-wrapper {
+        @extend .wrapper;
+        @extend .container;
+        @extend .gap;
+        
+        .gain-control-column {
+            grid-column: span 6;
+
+            p {
+                font-size: 1.125em;
+                line-height: 1.55em;
+                color: $light_grey_font;
+            }
+
+            &.image-column {
+                border-radius: 6px;
+                overflow: hidden;
+                line-height: 0;
+            }
+        }
+    }
+}
+
+/* || Screenshots Section */
+.screenshots {
+    background: $gradient;
+  
+    .screenshots-wrapper {
+        @extend .wrapper;
+        @extend .container;
+        @extend .gap;
+       
+        .screenshots-item {
+            grid-column: span 6;
+        }
+    }
+}
+
+/* || Secondary features Section */
+.secondary-features {
+    @extend .container;
+    padding-top: 0;
+    text-align: center;
+    
+    .features {
+        margin: 50px 0 100px 0;
+        .features-item {
+            padding: 0 50px;
+        }
     }
 }
 // features--twocolumns

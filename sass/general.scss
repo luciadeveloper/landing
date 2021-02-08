@@ -1,0 +1,62 @@
+.container {
+    width: 100%;
+    max-width: $container;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  
+    &.gap {
+        grid-gap: 50px;
+    }
+}
+
+main section {
+    padding: 100px 0;
+}
+
+.btn {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.25em;
+    border-radius: 3px;
+    padding: 20px 60px;
+    min-width: 290px;
+    padding: 20px 0;
+    min-width: 288px;
+    margin: 0 24px;
+    display: inline-block;
+
+}
+
+@mixin button-bg($bg,$font,$border) {
+    background: $bg;
+    border: 1px solid $border;
+    color:$font;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+
+.btn--primary {
+    @include button-bg($cta_secondary_color, $neutral, $border_color);
+}
+
+.btn--secondary {
+    @include button-bg($cta_color, $neutral, $border_color);
+}
+
+.btn--secondary--lightborder {
+    @include button-bg($cta_color, $neutral, #C15E26);
+}
+
+.btn--terciary {
+    @include button-bg($light_grey, $font_color, $light_colour);
+}
+ 

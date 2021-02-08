@@ -15,10 +15,19 @@ $primary_color: #444444;
 $secondary_color: #036AAB;
 $cta_color: #E27730;
 $cta_secondary_color: #025A91;
+$neutral: #ffffff;
+$border_color: #024F80;
 
 $light_colour: #DDDDDD;
-$gradient: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);; // todo
 
 
-//font
+$lighter:#C15E26;
+
+$light_grey: #F8F8F8;
+$light_grey_font: #CCCCCC;
+
+$gradient: linear-gradient(180deg, $light_grey 0%, $neutral 100%);
+
+
+
 

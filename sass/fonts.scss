@@ -11,15 +11,55 @@ body {
     color: $font_color;
 }
 
-h1, 
+p {
+    margin: 0 auto 0.8em;
+}
+
+h1 {
+    font-family: $titles_font_family;
+    font-size: 3em;
+    line-height: 2em;
+    font-weight: 400;
+    color: $neutral;
+    margin: 0; //en general?
+    padding: 20px 0 0 0;
+}
+
 h2 {
     font-family: $titles_font_family;
+    margin-top: 0;
+    font-size: 1.75em;
 }
+
 
 h3 {
     font-family: $main_font_family; //no need
+    color: $primary_color;
+    font-size: 1.5em;
+    line-height: 1.25em;
+    font-weight: 500;
+    margin: 0 auto 15px ;
 }
 
-a {
+a:not(.btn) {
     color:$secondary_color;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+        content: '';
+        border-bottom: 1px solid $secondary_color;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+    }
+
+    &:hover {
+        &:after {
+            display: none;
+        } 
+    }
 }
+
