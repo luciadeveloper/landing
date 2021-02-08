@@ -3,6 +3,9 @@
     max-width: $container;
     margin: 0 auto;
     overflow:hidden;
+    @media(max-width: $container) {
+        width: 92%;
+    }
 }
 
 .wrapper {
@@ -10,6 +13,9 @@
     grid-template-columns: repeat(12, 1fr);  
     &.gap {
         grid-gap: 50px;
+        @media(max-width: $container) {
+            grid-gap: 20px;
+        }
     }
 }
 
@@ -28,6 +34,10 @@ main section {
     min-width: 288px;
     margin: 0 24px;
     display: inline-block;
+
+    @media(max-width: $container) {
+        margin: 0 15px;
+    }
 
 }
 
