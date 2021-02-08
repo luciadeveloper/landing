@@ -2,7 +2,23 @@
 .main_header {
     background-color: $secondary_color;
     text-align: center;
-
+    h1 {
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        &::after {
+            content: '';
+            background-image: url(../assets/pro-badge.svg);
+            display: block;
+            position: absolute;
+            right: -42px;
+            top: 30px;
+            width: 42px;
+            height: 22px;
+            background-size: auto;
+            background-repeat: no-repeat;
+        }
+    }
     p {
         color: $neutral;
         font-size: 1.25em;
@@ -12,6 +28,43 @@
     }
     .buttons-section {
         margin: 50px auto;
+    }
+
+    .video {
+        @extend .container;  
+        box-shadow: 1px 2px 21px 0px #333333;
+        margin-bottom: -10px;
+        .video-wrapper {
+            background-color: $neutral;
+            overflow: hidden;
+            border-radius:6px; 
+            position: relative; 
+            
+            .video-cover {
+                padding: 50px;  
+            }
+            .h1 {
+                color: $primary_color;
+                font-size: 2.7em;
+            }
+            p {
+                color: $font_color; // con la opacidad del color reducdia
+                font-size: 1.7em;
+                line-height: 1.2em;
+            }
+            .play-button {
+                width: 110px;
+                position: absolute;
+                top: calc(50% - 50px);
+                left: calc(50% - 50px);
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .video-iframe {
+                background-color: #000000;
+            }
+        }
     }
 }
 

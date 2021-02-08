@@ -310,7 +310,7 @@ body {
 p {
   margin: 0 auto 0.8em; }
 
-h1 {
+h1, .h1 {
   font-family: "Arvo", serif;
   font-size: 3em;
   line-height: 2em;
@@ -347,7 +347,7 @@ a:not(.btn) {
   a:not(.btn):hover:after {
     display: none; }
 
-.container, .testimonials .testimonials-wrapper, .gain-control .gain-control-wrapper, .screenshots .screenshots-wrapper, .secondary-features {
+.container, .main_header .video, .testimonials .testimonials-wrapper, .gain-control .gain-control-wrapper, .screenshots .screenshots-wrapper, .secondary-features {
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
@@ -418,6 +418,21 @@ main section {
 .main_header {
   background-color: #036AAB;
   text-align: center; }
+  .main_header h1 {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto; }
+    .main_header h1::after {
+      content: '';
+      background-image: url(../assets/pro-badge.svg);
+      display: block;
+      position: absolute;
+      right: -42px;
+      top: 30px;
+      width: 42px;
+      height: 22px;
+      background-size: auto;
+      background-repeat: no-repeat; }
   .main_header p {
     color: #ffffff;
     font-size: 1.25em;
@@ -426,6 +441,32 @@ main section {
     margin: 0 auto; }
   .main_header .buttons-section {
     margin: 50px auto; }
+  .main_header .video {
+    box-shadow: 1px 2px 21px 0px #333333;
+    margin-bottom: -10px; }
+    .main_header .video .video-wrapper {
+      background-color: #ffffff;
+      overflow: hidden;
+      border-radius: 6px;
+      position: relative; }
+      .main_header .video .video-wrapper .video-cover {
+        padding: 50px; }
+      .main_header .video .video-wrapper .h1 {
+        color: #444444;
+        font-size: 2.7em; }
+      .main_header .video .video-wrapper p {
+        color: #777777;
+        font-size: 1.7em;
+        line-height: 1.2em; }
+      .main_header .video .video-wrapper .play-button {
+        width: 110px;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px); }
+        .main_header .video .video-wrapper .play-button:hover {
+          cursor: pointer; }
+      .main_header .video .video-wrapper .video-iframe {
+        background-color: #000000; }
 
 /* || Section Features & secondary features */
 .features {

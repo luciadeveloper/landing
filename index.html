@@ -7,6 +7,7 @@
     <title>Landing challenge</title>
     <meta name="Author" content="luciadeveloper">
     <link rel="stylesheet" type="text/css" href="./css/styles.min.css">
+ 
 </head>
 
 <body>
@@ -19,11 +20,20 @@
                 <a href="" class="btn btn--primary">Try the demo</a>
                 <a href="" class="btn btn--secondary">Get WPForms Now</a>
             </div>
-            <section class="video">
-                <!--image with button on top, on click video loads and plays "
-                    The featured image should play this YouTube video when the play button is clicked. How you implement that is up to you!
-                    "-->
-            </section>
+            
+        </div>
+        <div class="video">
+            <div class="video-wrapper">
+                <img class="play-button" alt="play" src="assets/play-button.svg"> 
+                <div class="video-cover">
+                    <img alt="laptop" src="assets/laptop.svg"> 
+                    <h2 class="h1">Form pages</h2>
+                    <p>Quicky create distraction-free form landing pages without hirihg a developer or writing any code.</p>
+                </div>
+                <!-- video-button onclick, loads iframe with jquery and autoplay-->
+                <div class="video-iframe"></div>
+               
+            </div>
         </div>
 	</header>
     
@@ -150,7 +160,10 @@
         </section>
 
     </main>
-
+<footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</footer>
 
 </body>
 
