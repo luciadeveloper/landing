@@ -42,31 +42,16 @@ main section {
     @media(max-width: $mobile) {
         &:first-child {
             margin-bottom: 30px;
-        }
-       
+        }  
     }
-
 }
 
-@mixin button-bg($bg,$font,$border) {
-    background: $bg;
-    border: 1px solid $border;
-    color:$font;
-    &:hover {
-      background:darken($bg,8%);
-      transition: all 0.3s ease;
-    }
-    &:active {
-      background:darken($bg,25%);
-    } 
-  }
-
 .btn--primary {
-    @include button-bg($cta_secondary_color, $neutral, $border_color);
+    @include button-bg($cta_secondary_color, $neutral);
 }
 
 .btn--secondary {
-    @include button-bg($cta_color, $neutral, $border_color);
+    @include button-bg($cta_color, $neutral);
 }
 
 .btn--secondary--lightborder {
