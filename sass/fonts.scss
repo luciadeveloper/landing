@@ -6,12 +6,13 @@ $titles_font_family : 'Arvo', serif;
 
 body {
     font-family: $main_font_family;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: $font-size;
+    line-height: $line-height;
     color: $font_color;
 }
 
-h1, h2 {
+h1, 
+h2 {
     font-family: $titles_font_family;
 }
 
