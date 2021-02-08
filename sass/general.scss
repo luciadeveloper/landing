@@ -36,7 +36,14 @@ main section {
     display: inline-block;
 
     @media(max-width: $container) {
-        margin: 0 15px;
+        margin: 0 5px;
+    }
+
+    @media(max-width: $mobile) {
+        &:first-child {
+            margin-bottom: 30px;
+        }
+       
     }
 
 }

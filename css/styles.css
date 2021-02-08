@@ -384,7 +384,10 @@ main section {
   display: inline-block; }
   @media (max-width: 960px) {
     .btn {
-      margin: 0 15px; } }
+      margin: 0 5px; } }
+  @media (max-width: 660px) {
+    .btn:first-child {
+      margin-bottom: 30px; } }
 
 .btn--primary {
   background: #025A91;
@@ -453,6 +456,9 @@ main section {
     margin: 0 auto; }
   .main_header .buttons-section {
     margin: 50px auto; }
+    @media (max-width: 660px) {
+      .main_header .buttons-section {
+        margin: 30px auto; } }
   .main_header .video {
     box-shadow: 1px 2px 21px 0px #333333;
     border-radius: 6px;
@@ -505,7 +511,7 @@ main {
     @media (max-width: 960px) {
       .features .features-item {
         padding: 30px; } }
-    @media (max-width: 650px) {
+    @media (max-width: 660px) {
       .features .features-item {
         grid-column: span 12;
         margin: 0px 80px;
@@ -518,7 +524,7 @@ main {
   background: linear-gradient(180deg, #F8F8F8 0%, #ffffff 100%); }
   .testimonials .testimonials-wrapper .testimonials-item-wrapper {
     grid-column: span 4; }
-    @media (max-width: 650px) {
+    @media (max-width: 660px) {
       .testimonials .testimonials-wrapper .testimonials-item-wrapper {
         grid-column: span 12; } }
     .testimonials .testimonials-wrapper .testimonials-item-wrapper .testimonials-item {
@@ -539,7 +545,7 @@ main {
   color: #ffffff; }
   .gain-control .gain-control-wrapper .gain-control-column {
     grid-column: span 6; }
-    @media (max-width: 650px) {
+    @media (max-width: 660px) {
       .gain-control .gain-control-wrapper .gain-control-column {
         grid-column: span 12; } }
     .gain-control .gain-control-wrapper .gain-control-column p {
@@ -559,7 +565,7 @@ main {
     .screenshots .screenshots-wrapper .screenshots-item {
       grid-column: span 6;
       overflow: visible; }
-      @media (max-width: 650px) {
+      @media (max-width: 660px) {
         .screenshots .screenshots-wrapper .screenshots-item {
           grid-column: span 12; } }
       .screenshots .screenshots-wrapper .screenshots-item img {
