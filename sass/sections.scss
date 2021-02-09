@@ -1,7 +1,9 @@
 /* || Section Header - hero */
+
 .main_header {
     background-color: $secondary_color;
     text-align: center;
+    
     h1 {
         position: relative;
         width: fit-content;
@@ -19,6 +21,7 @@
             background-repeat: no-repeat;
         }
     }
+    
     p {
         color: $neutral;
         font-size: 1.25em;
@@ -26,6 +29,7 @@
         max-width: 626px;
         margin: 0 auto;
     }
+    
     .buttons-section {
         margin: 50px auto;
         @media(max-width: $mobile) {
@@ -35,38 +39,55 @@
 
     .video {
         @extend .container;  
-        box-shadow: 1px 2px 21px 0px #333333;
+        box-shadow: $shadow;
         border-radius:6px; 
         position: relative;
+       
         .video-wrapper {
             background-color: $neutral;
             overflow: hidden;
-            
             position: relative; 
             
             .video-cover {
                 padding: 50px;  
             }
+           
             .h1 {
                 color: $primary_color;
                 font-size: 2.7em;
             }
+           
             p {
-                color: $font_color; // con la opacidad del color reducdia
+                color: lighten($font_color, 15%); // con la opacidad del color reducdia
                 font-size: 1.7em;
-                line-height: 1.2em;
+                line-height: 1.3em;
+                letter-spacing: 0.2px;
+                margin-bottom: 3px;
             }
+            
             .play-button {
-                width: 110px;
                 position: absolute;
-                top: calc(50% - 55px);
-                left: calc(50% - 55px);
+                top: calc(50% - 62px);
+                left: calc(50% - 62px);
                 border: none;
                 background: transparent;
+                margin: 0;
+                padding: 0;
+
+                @media(max-width: $mobile) {
+                    top: 30%;
+                }
+
                 &:hover {
                     cursor: pointer;
                 }
+               
+                img {
+                    box-shadow: $shadow;
+                    border-radius: 50%;
+                }
             }
+           
             .video-iframe {
                 background-color: #000000;
             }
@@ -74,15 +95,20 @@
     }
 }
 
+/* || MAIN */
+
 main {
     background: $neutral;
     margin-top: -270px;
     padding-top: 270px;
 }
+
 /* || Section Features & secondary features */
+
 .features {
     @extend .wrapper;
     max-width: $container + 100;
+   
     .features-item {
         grid-column: span 4;
         padding: 40px 50px;
@@ -103,7 +129,8 @@ main {
         }
 
         img {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            height: 42px;
         }
 
         @media(max-width: $container) {
@@ -112,7 +139,7 @@ main {
 
         @media(max-width: $mobile) {
             grid-column: span 12;
-            margin: 0px 80px;
+            margin: 0px 40px;
             border-right: 0;
             &:nth-child(2), &:nth-child(3) {
                 border-top: 1px solid $light_colour;
@@ -126,11 +153,13 @@ main {
 
 .testimonials {
     background: $gradient;
+   
     .testimonials-wrapper {
         @extend .wrapper;
         @extend .container;
         @extend .gap;
-       // max-width: $container + 100;
+    
+    
        .testimonials-item-wrapper {
             grid-column: span 4;
            
@@ -147,8 +176,10 @@ main {
                 .testimonials-details {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
-                
+                    align-items: center;  
+                    font-size: 0.9em;
+                    color: lighten($font_color, 20%);
+                    
                     .stars {
                         background-image: url('../assets/icons/star-solid.svg');
                         height: 16px;
@@ -174,6 +205,7 @@ main {
 }
 
 /* || Buttons Section */
+
 .buttons-section {
     margin: 0px auto;
     text-align: center;
@@ -199,7 +231,7 @@ main {
             
             p {
                 font-size: 1.125em;
-                line-height: 1.55em;
+                line-height: 1.58em;
                 color: $light_grey_font;
             }
 
@@ -221,6 +253,7 @@ main {
         @extend .container;
         @extend .gap;
         overflow: visible;
+       
         .screenshots-item {
             grid-column: span 6;
             overflow: visible;
@@ -230,7 +263,7 @@ main {
             }
             
             img {
-                box-shadow: 2px 3px 12px 0 #aaa;
+                box-shadow: $shadow;
                 border-radius: 6px;
             }
         }
@@ -238,13 +271,22 @@ main {
 }
 
 /* || Secondary features Section */
+
 .secondary-features {
-    @extend .container;
     padding-top: 0;
     text-align: center;
     
+    .container {
+        @extend .container;
+       
+        h3{
+            padding: 0 15px;
+        }
+    }
+    
     .features {
-        margin: 50px 0 100px 0;
+        margin: 50px auto 100px auto;
+        
         .features-item {
             padding: 0 50px;
             @media(max-width: $container) {
@@ -253,5 +295,4 @@ main {
         }
     }
 }
-// features--twocolumns
-// features--twocolumns-item
+

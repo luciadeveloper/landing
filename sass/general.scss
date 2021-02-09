@@ -3,6 +3,7 @@
     max-width: $container;
     margin: 0 auto;
     overflow:hidden;
+   
     @media(max-width: $container) {
         width: 92%;
     }
@@ -11,6 +12,7 @@
 .wrapper {
     display: grid;
     grid-template-columns: repeat(12, 1fr);  
+   
     &.gap {
         grid-gap: 50px;
         @media(max-width: $container) {
@@ -55,7 +57,7 @@ main section {
 }
 
 .btn--secondary--lightborder {
-    @include button-bg($cta_color, $neutral, #C15E26);
+    @include button-bg($cta_color, $neutral, $lighter);
 }
 
 .btn--terciary {

@@ -1,13 +1,14 @@
-
-
+/* Mixing to create buttons with different background color, font color and border color*/
 @mixin button-bg( $bg, $font, $border: $border_color) {
     background: $bg;
     border: 1px solid $border;
     color:$font;
+  
     &:hover {
       background:darken($bg,8%);
       transition: all 0.3s ease;
     }
+  
     &:active {
       background:darken($bg,25%);
     } 
