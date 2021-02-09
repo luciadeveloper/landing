@@ -3,13 +3,17 @@
 Simple landing page created from design provided
 
 HTML5
+
 Sass, compiled, minimized and prefixed with Gulp.
+
 Responsive - tested in Firefox, Safari, Chome and Edge. (Max Edge 15)
+
 Accessible
 
 === How to install ===
 
 run 'npm install' to install the dependencies specified in the package.json file. 
+
 run 'gulp sass' to compile, prefix and minimize the sass files in the sass folder. The files will be merged in the css/styles.min.css
 
 === Next steps ===
