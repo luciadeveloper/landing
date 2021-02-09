@@ -32,10 +32,9 @@ h2 {
     line-height: 1.3em;
 }
 
-
 h3 {
-    font-family: $main_font_family; //no need
     color: $primary_color;
+    font-family: $main_font_family; //no need
     font-size: 1.5em;
     line-height: 1.25em;
     font-weight: 500;
@@ -50,10 +49,10 @@ a:not(.btn) {
     &:after {
         content: '';
         border-bottom: 1px solid $secondary_color;
+        bottom: -2px;
         display: block;
         position: absolute;
         left: 0;
-        bottom: -2px;
         width: 100%;
     }
 

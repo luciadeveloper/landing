@@ -6,28 +6,29 @@
     
     h1 {
         position: relative;
-        width: fit-content;
         margin: 0 auto;
+        width: fit-content;
+        
         &::after {
             content: '';
             background-image: url('../assets/pro-badge.svg');
+            background-size: auto;
+            background-repeat: no-repeat;
             display: block;
-            position: absolute;
+            height: 22px;
+            position: absolute;            
             right: -42px;
             top: 30px;
             width: 42px;
-            height: 22px;
-            background-size: auto;
-            background-repeat: no-repeat;
         }
     }
     
     p {
         color: $neutral;
         font-size: 1.25em;
-        line-height: 1.75em;
         max-width: 626px;
         margin: 0 auto;
+        line-height: 1.75em;
     }
     
     .buttons-section {
@@ -55,6 +56,12 @@
             .h1 {
                 color: $primary_color;
                 font-size: 2.7em;
+                line-height: 1.8em;
+                
+                @media(max-width: $mobile) {
+                    line-height: 1em;
+                    margin-bottom: 20px;
+                }
             }
            
             p {
@@ -66,16 +73,16 @@
             }
             
             .play-button {
-                position: absolute;
-                top: calc(50% - 62px);
-                left: calc(50% - 62px);
-                border: none;
                 background: transparent;
+                border: none;
+                position: absolute;
+                left: calc(50% - 62px);                
+                top: calc(50% - 62px);
                 margin: 0;
                 padding: 0;
 
                 @media(max-width: $mobile) {
-                    top: 30%;
+                    top: 15%;
                 }
 
                 &:hover {
@@ -110,12 +117,12 @@ main {
     max-width: $container + 100;
    
     .features-item {
+        border-right: $border;
+        border-top: $border;
         grid-column: span 4;
         padding: 40px 50px;
         text-align: center;
-        border-right: 1px solid $light_colour;
-        border-top: 1px solid $light_colour;
-
+       
         &:first-child, &:nth-child(2), &:nth-child(3) {
             border-top: 0;
         }
@@ -129,8 +136,8 @@ main {
         }
 
         img {
-            margin-bottom: 25px;
             height: 42px;
+            margin-bottom: 25px;
         }
 
         @media(max-width: $container) {
@@ -138,11 +145,12 @@ main {
         }
 
         @media(max-width: $mobile) {
+            border-right: 0;
             grid-column: span 12;
             margin: 0px 40px;
-            border-right: 0;
+           
             &:nth-child(2), &:nth-child(3) {
-                border-top: 1px solid $light_colour;
+                border-top: $border;
             }
             
         }
@@ -168,23 +176,22 @@ main {
             }
             
             .testimonials-item {
-                padding: 30px;
-                border: 1px solid $light_colour;
-                border-radius: 6px;
                 background-color: $neutral;
-                
+                border: $border;
+                border-radius: 6px;
+                padding: 30px;
+
                 .testimonials-details {
-                    display: flex;
-                    justify-content: space-between;
                     align-items: center;  
-                    font-size: 0.9em;
+                    display: flex;
                     color: lighten($font_color, 20%);
-                    
+                    justify-content: space-between;
+                    font-size: 0.9em;
+                   
                     .stars {
                         background-image: url('../assets/icons/star-solid.svg');
                         height: 16px;
-                        float: right;
-                      
+                       
                         &.stars-five {
                             width: 16px * 5;
                         }
@@ -208,8 +215,8 @@ main {
 
 .buttons-section {
     margin: 0px auto;
-    text-align: center;
     padding-top: 0;
+    text-align: center;
 }
 
 /* || Gain control Section */
@@ -230,9 +237,10 @@ main {
             }
             
             p {
+                color: $light_grey_font;
                 font-size: 1.125em;
                 line-height: 1.58em;
-                color: $light_grey_font;
+               
             }
 
             &.image-column {

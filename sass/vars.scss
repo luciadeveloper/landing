@@ -1,7 +1,9 @@
 $container: 960px;
 
+//font sizes
 $font-size: 16px;
 $line-height: 24px;
+
 //screen sizes
 $mobile: 660px;
 $desktop: $container;
@@ -9,16 +11,17 @@ $large_desktop : 1600px;
 
 
 //colours
-$font_color: #777777;
 $primary_color: #444444;
+$font_color: #777777; //lighten($primary_color, 20%);
+
 $secondary_color: #036AAB;
-$cta_color: #E27730;
 $cta_secondary_color: #025A91;
-$neutral: #ffffff;
 $border_color: #024F80;
 
-$light_colour: #DDDDDD;
+$cta_color: #E27730;
 $lighter:#C15E26;
+
+$neutral: #ffffff;
 $light_grey: #F8F8F8;
 $light_grey_font: #CCCCCC;
 
@@ -26,4 +29,4 @@ $gradient: linear-gradient(180deg, $light_grey 0%, $neutral 100%);
 
 $shadow:  1px 2px 50px 0px rgba(0, 0, 0, 0.2);
 
-
+$border: 1px solid lighten($font_color, 40%);

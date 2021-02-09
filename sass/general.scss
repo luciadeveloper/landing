@@ -1,9 +1,9 @@
 .container {
-    width: 100%;
     max-width: $container;
     margin: 0 auto;
     overflow:hidden;
-   
+    width: 100%;
+
     @media(max-width: $container) {
         width: 92%;
     }
@@ -26,16 +26,14 @@ main section {
 }
 
 .btn {
-    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
     font-weight: bold;
     font-size: 1.25em;
-    border-radius: 3px;
-    padding: 20px 60px;
-    min-width: 290px;
     padding: 20px 0;
     min-width: 288px;
     margin: 0 24px;
-    display: inline-block;
+    text-decoration: none;
 
     @media(max-width: $container) {
         margin: 0 5px;
@@ -61,6 +59,6 @@ main section {
 }
 
 .btn--terciary {
-    @include button-bg($light_grey, $font_color, $light_colour);
+    @include button-bg($light_grey, $font_color, lighten($font_color, 40%));
 }
  
