@@ -480,7 +480,9 @@ main section {
         width: 110px;
         position: absolute;
         top: calc(50% - 55px);
-        left: calc(50% - 55px); }
+        left: calc(50% - 55px);
+        border: none;
+        background: transparent; }
         .main_header .video .video-wrapper .play-button:hover {
           cursor: pointer; }
       .main_header .video .video-wrapper .video-iframe {

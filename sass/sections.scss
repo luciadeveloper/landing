@@ -61,6 +61,8 @@
                 position: absolute;
                 top: calc(50% - 55px);
                 left: calc(50% - 55px);
+                border: none;
+                background: transparent;
                 &:hover {
                     cursor: pointer;
                 }
