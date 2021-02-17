@@ -1,6 +1,6 @@
 === HTML5 & Sass Landing page ===
 
-Simple landing page created from design provided
+Simple landing page created from design provided. [See design provided here](https://luciadeveloper.com/wp-content/uploads/sites/8/2021/02/landing-design.pdf)
 
 HTML5
 
